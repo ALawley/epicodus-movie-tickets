@@ -14,4 +14,8 @@ describe("Ticket", function() {
     var testTicket = new Ticket("Star Wars", "70", "5:00 PM", "regular");
     expect(testTicket.price()).to.equal("$9");
   });
+  it("decreases price by $2 for matinees", function() {
+    var testTicket = new Ticket("Star Wars", "18", "1:00 PM", "regular");
+    expect(testTicket.price()).to.equal("$9");
+  });
 });
