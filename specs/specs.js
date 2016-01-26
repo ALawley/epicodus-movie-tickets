@@ -10,4 +10,8 @@ describe("Ticket", function() {
     var testTicket = new Ticket("Star Wars", "18", "5:00 PM", "regular");
     expect(testTicket.price()).to.equal("$11");
   });
+  it("decreases price by $2 for seniors", function() {
+    var testTicket = new Ticket("Star Wars", "70", "5:00 PM", "regular");
+    expect(testTicket.price()).to.equal("$9");
+  });
 });

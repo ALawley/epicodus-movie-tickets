@@ -7,5 +7,8 @@ function Ticket(movie, age, time, screenType) {
 
 Ticket.prototype.price = function() {
   var ticketPrice = 11;
+  if (this.age >= 65) {
+    ticketPrice -= 2
+  } else {}
   return "$" + ticketPrice;
 }
