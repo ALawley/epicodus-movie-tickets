@@ -21,5 +21,20 @@ Ticket.prototype.price = function() {
   if (this.screenType === "IMAX") {
     ticketPrice += 2.5;
   }else {}
-  return "$" + ticketPrice;
+  return "$" + ticketPrice.toFixed(2);
 }
+
+$(document).ready(function() {
+  $("form#ticket-calculator").submit(function(event) {
+    event.preventDefault();
+    var inputMovie = $("select#movie").val();
+    var inputTime = $("select#time").val();
+    var inputAge = parseInt($("input#age").val());
+    var inputScreenType = $("select#screenType").val();
+
+    var newTicket = new Ticket(inputMovie, inputAge, inputTime, inputScreenType);
+
+    $(".result-price").text(newTicket.price());
+    $("#results").show();
+  });
+});

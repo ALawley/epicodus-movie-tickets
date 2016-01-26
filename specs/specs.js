@@ -8,26 +8,26 @@ describe("Ticket", function() {
   });
   it("returns the price of the ticket", function() {
     var testTicket = new Ticket("Star Wars", "18", "5:00 PM", "regular");
-    expect(testTicket.price()).to.equal("$11");
+    expect(testTicket.price()).to.equal("$11.00");
   });
   it("decreases price by $2 for seniors", function() {
     var testTicket = new Ticket("Star Wars", "70", "5:00 PM", "regular");
-    expect(testTicket.price()).to.equal("$9");
+    expect(testTicket.price()).to.equal("$9.00");
   });
   it("decreases price by $2 for matinees", function() {
     var testTicket = new Ticket("Star Wars", "18", "1:00 PM", "regular");
-    expect(testTicket.price()).to.equal("$9");
+    expect(testTicket.price()).to.equal("$9.00");
   });
   it("increases price by $3 for midnight showings", function() {
     var testTicket = new Ticket("Star Wars", "18", "12:00 AM", "regular");
-    expect(testTicket.price()).to.equal("$14");
+    expect(testTicket.price()).to.equal("$14.00");
   });
   it("decreases price by $3 for old movies", function() {
     var testTicket = new Ticket("Bladerunner", "18", "5:00 PM", "regular");
-    expect(testTicket.price()).to.equal("$8");
+    expect(testTicket.price()).to.equal("$8.00");
   });
   it("increases price by $2.5 for IMAX movies", function() {
     var testTicket = new Ticket("Star Wars", "18", "5:00 PM", "IMAX");
-    expect(testTicket.price()).to.equal("$13.5");
+    expect(testTicket.price()).to.equal("$13.50");
   });
 });
