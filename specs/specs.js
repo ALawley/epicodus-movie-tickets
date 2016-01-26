@@ -22,4 +22,8 @@ describe("Ticket", function() {
     var testTicket = new Ticket("Bladerunner", "18", "5:00 PM", "regular");
     expect(testTicket.price()).to.equal("$8");
   });
+  it("increases price by $2.50 for IMAX movies", function() {
+    var testTicket = new Ticket("Star Wars", "18", "5:00 PM", "IMAX");
+    expect(testTicket.price()).to.equal("$13.5");
+  });
 });

@@ -16,5 +16,8 @@ Ticket.prototype.price = function() {
   if (this.movie === "Bladerunner") {
     ticketPrice -= 3;
   } else {}
+  if (this.screenType === "IMAX") {
+    ticketPrice += 2.5;
+  }else {}
   return "$" + ticketPrice;
 }
