@@ -18,11 +18,15 @@ describe("Ticket", function() {
     var testTicket = new Ticket("Star Wars", "18", "1:00 PM", "regular");
     expect(testTicket.price()).to.equal("$9");
   });
+  it("increases price by $3 for midnight showings", function() {
+    var testTicket = new Ticket("Star Wars", "18", "12:00 AM", "regular");
+    expect(testTicket.price()).to.equal("$14");
+  });
   it("decreases price by $3 for old movies", function() {
     var testTicket = new Ticket("Bladerunner", "18", "5:00 PM", "regular");
     expect(testTicket.price()).to.equal("$8");
   });
-  it("increases price by $2.50 for IMAX movies", function() {
+  it("increases price by $2.5 for IMAX movies", function() {
     var testTicket = new Ticket("Star Wars", "18", "5:00 PM", "IMAX");
     expect(testTicket.price()).to.equal("$13.5");
   });

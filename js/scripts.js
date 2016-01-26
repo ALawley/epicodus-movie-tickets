@@ -12,6 +12,8 @@ Ticket.prototype.price = function() {
   } else {}
   if (this.time === "1:00 PM") {
     ticketPrice -= 2;
+  } else if (this.time === "12:00 AM") {
+    ticketPrice += 3;
   } else {}
   if (this.movie === "Bladerunner") {
     ticketPrice -= 3;
