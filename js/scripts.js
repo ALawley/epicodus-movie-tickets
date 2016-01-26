@@ -35,6 +35,9 @@ $(document).ready(function() {
     var newTicket = new Ticket(inputMovie, inputAge, inputTime, inputScreenType);
 
     $(".result-price").text(newTicket.price());
+    $(".movie-name").text(newTicket.movie);
+    $(".movie-time").text(newTicket.time);
+    $(".movie-screen").text(newTicket.screenType);
     $("#results").show();
   });
 });
